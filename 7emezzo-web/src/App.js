@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
-import LoginScreen from "./screens/Login"; 
+import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginScreen />} />
         <Route path="/signup" element={<SignupScreen />} />
+        <Route path="/home" element={<HomeScreen />} />
       </Routes>
     </div>
   );

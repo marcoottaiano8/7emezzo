@@ -1,10 +1,14 @@
 import React from "react";
-import Login from "7emezzo-library/dist/screens/Login"
+import Login from "7emezzo-libraryv2/dist/screens/Login";
+import { useNavigate } from "react-router-dom";
 
-function LoginScreen(){
-    return(
-        <Login />
-    )
+function LoginScreen() {
+  const navigate = useNavigate();
+
+  function goToHome() {
+    navigate("/home");
+  }
+  return <Login goToGame={goToHome} />;
 }
 
-export default LoginScreen  
+export default LoginScreen;
