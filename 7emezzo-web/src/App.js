@@ -1,11 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Login from "7emezzo-library/dist/screens/Login";
+import { Routes, Route, Link } from "react-router-dom";
+import LoginScreen from "./screens/Login"; 
+import SignupScreen from "./screens/SignupScreen";
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/signup" element={<SignupScreen />} />
+      </Routes>
     </div>
   );
 }
