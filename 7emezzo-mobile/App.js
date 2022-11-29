@@ -1,59 +1,36 @@
-<<<<<<< HEAD
-import { Login } from "7emezzo-library";
-import Signup from "7emezzo-library/dist/screens/Signup";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-=======
-import { Login } from '7emezzo-library';
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
->>>>>>> 57608437cebb10a90ecc02d8d32eb6577a28972e
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginScreen from "./view/LoginScreen";
+import SignupScreen from "./view/SignupScreen";
+import HomeScreen from "./view/HomeScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   let options = {
     headerStyle: {
-      backgroundColor: 'darkblue',
+      backgroundColor: "darkblue",
     },
-    headerTintColor: '#fff',
+    headerTintColor: "#fff",
     headerTitleStyle: {
-      fontWeight: 'bold',
+      fontWeight: "bold",
     },
-
-  }
+  };
 
   return (
-<<<<<<< HEAD
-    <View>
-      <Signup />
-    </View>
-=======
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar></StatusBar>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName={"Login"}>
-          <Stack.Screen
-            name="Login"
-            component={Tutorial}
-            options={options}
-          />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={options}
-          />
-          <Stack.Screen
-            name="CameraScreen"
-            component={CameraScreen}
-            options={options}
-          />
-          <Stack.Screen
-            name="Gallery"
-            component={Gallery}
-            options={options}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
->>>>>>> 57608437cebb10a90ecc02d8d32eb6577a28972e
+    <NavigationContainer>
+      <StatusBar style="auto" />
+      {/* <SafeAreaView style={{ flex: 1 }}> */}
+      <Stack.Navigator
+        initialRouteName={"Home"}
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+      {/* </SafeAreaView> */}
+    </NavigationContainer>
   );
 }
