@@ -13,5 +13,5 @@ export default function LoginScreen() {
     navigation.navigate("Signup");
   }
 
-  return <Login goToGame={goToHome} goToSignup={goToSignup}/>;
+  return <Login goToHome={goToHome} goToSignup={goToSignup}/>;
 }
