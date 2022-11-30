@@ -10,9 +10,9 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StatusBar />
-      <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+      <NavigationContainer>
+        <StatusBar />
         <Stack.Navigator
           initialRouteName={"Game"}
           screenOptions={{ headerShown: false }}
@@ -22,7 +22,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Game" component={GameScreen} />
         </Stack.Navigator>
-      </SafeAreaView>
-    </NavigationContainer>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
