@@ -8,7 +8,8 @@ function LoginScreen() {
   function goToHome() {
     navigate("/home");
   }
-  return <Login goToGame={goToHome} />;
+
+  return <Login goToHome={goToHome} />;
 }
 
 export default LoginScreen;
