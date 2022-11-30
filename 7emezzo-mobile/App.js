@@ -8,22 +8,12 @@ import HomeScreen from "./view/HomeScreen";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  let options = {
-    headerStyle: {
-      backgroundColor: "darkblue",
-    },
-    headerTintColor: "#fff",
-    headerTitleStyle: {
-      fontWeight: "bold",
-    },
-  };
-
   return (
     <NavigationContainer>
       <StatusBar style="auto" />
       {/* <SafeAreaView style={{ flex: 1 }}> */}
       <Stack.Navigator
-        initialRouteName={"Home"}
+        initialRouteName={"Login"}
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Login" component={LoginScreen} />
