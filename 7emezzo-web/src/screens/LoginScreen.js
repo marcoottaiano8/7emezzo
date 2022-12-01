@@ -9,7 +9,11 @@ function LoginScreen() {
     navigate("/home");
   }
 
-  return <Login goToHome={goToHome} />;
+  function goToSignup() {
+    navigate("/signup");
+  }
+
+  return <Login goToSignup={goToSignup} goToHome={goToHome} />;
 }
 
 export default LoginScreen;
