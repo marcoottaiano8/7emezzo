@@ -8,6 +8,9 @@ export default function HomeScreen() {
   function goToRanking() {
     navigate("/ranking");
   }
+  function goToGame() {
+    navigate("/game");
+  }
 
-  return <Home goToRanking={goToRanking}/>;
+  return <Home goToRanking={goToRanking} goToGame={goToGame}/>;
 }
