@@ -12,5 +12,9 @@ export default function HomeScreen() {
     navigation.navigate("Ranking");
   }
 
-  return <Home goToRanking={goToRanking} />;
+  function goToGame(){
+    navigation.navigate("Game");
+  }
+
+  return <Home goToRanking={goToRanking} goToGame={goToGame} />;
 }
